@@ -206,6 +206,18 @@ async def account_login(bot: Client, m: Message):
                         await m.reply_text(str(e))
                         time.sleep(e.x)
                         continue
+                elif ".zip" in url:
+                    try:
+                        cmd = f'yt-dlp -o "{name}.zip" "{url}"'
+                        download_cmd = f"{cmd} -R 25 --fragment-retries 25"
+                        os.system(download_cmd)
+                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', caption=cc1)
+                        count += 1
+                        os.remove(f'{name}.zip')
+                    except FloodWait as e:
+                        await m.reply_text(str(e))
+                        time.sleep(e.x)
+                        continue
                 else:
                     Show = f"**⥥ Downloading ➤**\n**Name ➤** `{name}\n\nQuality ➤ {raw_text2}` \n\n**Bot By ➤ **@MASOOMGURJARTG"
                
