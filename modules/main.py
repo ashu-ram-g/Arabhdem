@@ -24,14 +24,14 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 bot = Client(
     "bot",
-    api_id=28466214,
-    api_hash= "3f55d44aae0f6c72f0dd8855adeeb60f",
-    bot_token= "6689560324:AAGH7EiA3C62k0LvWSC4pfVermZlxbHrFPg")
+    api_id=18116881,
+    api_hash= "cca3bacf40fb3ebcb4f075b2e46ff1bd",
+    bot_token= "7958229600:AAHqpzrkOdzCNn-0QF5JOsi6bLvuxn9ETBM")
 
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("Hi!\n\nGive /TXT Command to Downlaod From a Text file.\n\n𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 :**@MASOOMGURJARTG\n")
+    editable = await m.reply_text("Hi!\n\nGive /TXT Command to Downlaod From a Text file.\n\n𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 :**\n")
 
 
 @bot.on_message(filters.command("stop"))
@@ -219,7 +219,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⥥ Downloading ➤**\n**Name ➤** `{name}\n\nQuality ➤ {raw_text2}` \n\n**Bot By ➤ **@MASOOMGURJARTG"
+                    Show = f"**⥥ Downloading ➤**\n**Name ➤** `{name}\n\nQuality ➤ {raw_text2}` \n\n**Bot By ➤ **"
                
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
