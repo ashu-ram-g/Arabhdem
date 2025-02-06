@@ -24,9 +24,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 bot = Client(
     "bot",
-    api_id=26910519,
-    api_hash= "0b14672454a94495a50c9381ba107e30",
-    bot_token= "7426196910:AAEj2BEiNLED-pPWsulRPZpgJR4_4O5O6X8")
+    api_id=18116881,
+    api_hash= "cca3bacf40fb3ebcb4f075b2e46ff1bd",
+    bot_token= "7958229600:AAHqpzrkOdzCNn-0QF5JOsi6bLvuxn9ETBM")
 
 
 @bot.on_message(filters.command(["start"]))
@@ -41,12 +41,12 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["GURJAR"]))
+@bot.on_message(filters.command(["YADAV"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Hi\n\nTO download a test file send here » ')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
-    await bot.send_document(-1002148302049, x)
+    await bot.send_document(-1002020978757, x)
     await input.delete(True)
     file_name, ext = os.path.splitext(os.path.basename(x))
   
